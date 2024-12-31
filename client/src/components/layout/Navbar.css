@@ -1,0 +1,109 @@
+/* Basic Navbar styles */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Links container */
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.falseVal, .trueVal {
+  display: flex;
+  gap: 20px;
+}
+
+/* Style the links */
+.links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.links a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .links {
+    transition: transform 0.3s ease;
+  }
+
+  .links {
+    display: none; /* Hide the links by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .falseVal, .trueVal {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* Hamburger menu button (visible only on mobile screens) */
+  .hamburger-menu {
+    display: block; /* Show the hamburger menu button */
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    padding: 10px;
+  }
+
+  .hamburger-menu i {
+    transition: transform 0.3s ease;
+  }
+
+  /* Toggle the links when the hamburger button is clicked */
+  .hamburger-menu.open + .links {
+    display: flex;
+  }
+
+  /* Change hamburger icon to X when menu is open */
+  .hamburger-menu.open i {
+    transform: rotate(90deg);
+  }
+}
+
+/* Desktop view - Show links and hide hamburger button */
+@media (min-width: 769px) {
+  .hamburger-menu {
+    display: none; /* Hide the hamburger menu button on larger screens */
+  }
+
+  .links {
+    display: flex; /* Show links normally on desktop */
+  }
+}
+
+/* For small mobile screens */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .links a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}

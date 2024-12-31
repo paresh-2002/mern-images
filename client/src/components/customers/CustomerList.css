@@ -1,0 +1,44 @@
+/* Style for the customer list container */
+ul {
+  list-style-type: none; /* Remove default list bullets */
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+li:hover {
+  background-color: #f1f1f1;
+}
+
+.delete-Btn{
+  top: 5px;
+  right: 5px;
+  border: none;
+  color: rgba(255, 0, 0, 0.6);
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-Btn:hover {
+  color: red;
+}
+
+.delete-Btn i {
+  font-size: 16px;
+}
+
+.customer-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

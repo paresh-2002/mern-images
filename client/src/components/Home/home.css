@@ -1,0 +1,267 @@
+
+/* Main dashboard styling */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header section where AddImage component resides */
+.header {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Image container with overflow scroll */
+#imageContainer {
+  width: 100%;
+  max-width: 800px;  /* Max width for the image container */
+  max-height: 500px; /* You can adjust the height based on your preference */
+  overflow-y: auto;  /* Enables vertical scrolling */
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 15px;
+}
+
+/* Style for each individual image item */
+.image-item {
+  padding: 10px;
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.uploaded-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;  /* Ensures image doesn't stretch */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Date of image upload styling */
+.image-date {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  padding: 5px;
+}
+
+/* Delete button styling */
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(255, 0, 0, 0.6);
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: red;
+}
+
+.delete-btn i {
+  font-size: 16px;
+}
+
+/* AddImage styling section (keeping it consistent from your previous AddImage component) */
+.add-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+/* Styling for AddImage form */
+.add-image-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.addImage-input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.input-icon {
+  position: absolute;
+  right: 10px;
+  color: #666;
+  font-size: 18px;
+}
+
+.upload-button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+  background-color: #45a049;
+}
+
+.upload-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+  /* ---- form ---- */
+
+  /* Main container for the whole page */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Main title styling */
+.main-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Add image form container */
+.add-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;  /* Limit the width of the form */
+  margin-top: 20px;   /* Margin to separate from the title */
+}
+
+/* Style for the form */
+.add-image-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Input field for selecting the image */
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.addImage-input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Icon inside the input field */
+.input-icon {
+  position: absolute;
+  right: 10px;
+  color: #666;
+  font-size: 18px;
+}
+
+/* Preview section for the selected image */
+.image-preview {
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.preview-img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* Display error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Upload button */
+.upload-button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect on the button */
+.upload-button:hover {
+  background-color: #45a049;
+}
+
+/* Disable button while uploading */
+.upload-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* File input styling (optional) */
+.addImage-input::-webkit-file-upload-button {
+  display: none;
+}
+
+ 

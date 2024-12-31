@@ -1,0 +1,50 @@
+/* Style for the customer form container */
+.customer-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the input field */
+.customer-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Style for the submit button */
+.customer-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect on the button */
+.customer-form button:hover {
+  background-color: #45a049;
+}
+
+/* Disabled button style */
+.customer-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Style for the error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
