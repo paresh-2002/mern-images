@@ -9,7 +9,7 @@ function LogOutBtn() {
   const navigate = useNavigate();
 
   async function logOut() {
-    await axios.get("http://localhost:5000/auth/logout");
+    await axios.get(`${process.env.REACT_APP_URL}/auth/logout`);
     await getLoggedIn();
     navigate("/");
   }

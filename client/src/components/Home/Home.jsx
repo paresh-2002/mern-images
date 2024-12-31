@@ -9,7 +9,7 @@ const Home = () => {
   // Function to fetch images from the server
   const getImages = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/images");
+      const response = await axios.get(`${process.env.REACT_APP_URL}/images`);
       setImages(response?.data);
     } catch (err) {
       console.log(err);
@@ -18,7 +18,7 @@ const Home = () => {
 
   // Function to delete an image from the server
   const deleteImage = async (id) => {
-    const res = await axios.delete(`http://localhost:5000/images/${id}`);
+    const res = await axios.delete(`${process.env.REACT_APP_URL}/images/${id}`);
     getImages();
     alert("Image deleted successfully" );
     if (!res.success) return { status: false, message: res.message };

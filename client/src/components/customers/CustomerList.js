@@ -6,7 +6,7 @@ function CustomerList({ customers, getCustomers, setLoading, setError }) {
     console.log(`Deleting customer with ID: ${id}`);
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:5000/customer/${id}`);
+      await axios.delete(`${process.env.REACT_APP_URL}/customer/${id}`);
       getCustomers();
     } catch (err) {
       console.error("Error deleting customer:", err);

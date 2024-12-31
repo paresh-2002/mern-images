@@ -14,7 +14,7 @@ function Customers() {
     setLoading(true);  // Start loading
     setError("");  // Clear previous errors
     try {
-      const customersRes = await axios.get("http://localhost:5000/customer/");
+      const customersRes = await axios.get(`${process.env.REACT_APP_URL}/customer`);
       setCustomers(customersRes.data);
     } catch (err) {
       console.error("Error fetching customers:", err);

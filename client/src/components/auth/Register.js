@@ -21,7 +21,7 @@ function Register() {
         password,
         passwordVerify,
       };
-      await axios.post("http://localhost:5000/auth", registerData);
+      await axios.post(`${process.env.REACT_APP_URL}/auth`, registerData);
       await getLoggedIn();
       navigate("/");
     } catch (err) {

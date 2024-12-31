@@ -17,7 +17,7 @@ function CustomerForm({ getCustomers }) {
       };
       
       // Send request to backend to save customer
-      await axios.post("http://localhost:5000/customer/", customerData);
+      await axios.post(`${process.env.REACT_APP_URL}/customer`, customerData);
 
       // Refresh customer list after successful save
       getCustomers();

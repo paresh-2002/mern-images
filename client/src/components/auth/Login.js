@@ -19,7 +19,7 @@ function Login() {
         email,
         password,
       };
-      await axios.post("http://localhost:5000/auth/login", loginData);
+      await axios.post(`${process.env.REACT_APP_URL}/auth/login`, loginData);
       await getLoggedIn();
       navigate("/");
     } catch (err) {
