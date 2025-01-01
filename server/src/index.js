@@ -14,7 +14,10 @@ app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-  cors()
+  cors({
+    origin: process.env.FRONTEND_URL || "http://localhost:3000", // Ensure FRONTEND_URL is set in .env
+    credentials: true,
+  })
 );
 
 // connect to mongoDB
