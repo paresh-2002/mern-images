@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000", // Ensure FRONTEND_URL is set in .env
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   })
 );
