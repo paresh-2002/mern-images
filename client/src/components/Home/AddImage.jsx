@@ -22,12 +22,11 @@ const AddImage = ({ getImages }) => {
     setError("");
 
     try {
-      const res = await axios.post(`${process.env.REACT_APP_URL}/images/upload-image`, formData, {
+       const res = await axios.post(`${process.env.REACT_APP_URL}/images/upload-image`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-
       alert(res.data.message);
       setImage(null);
       getImages();
