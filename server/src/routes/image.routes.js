@@ -5,7 +5,7 @@ import {auth} from "../middlewares/auth.middleware.js"
 const router = Router()
 
 
-router.route('/upload-image').post(upload.single('image'), uploadImage)
+router.route('/').post(upload.single('image'), uploadImage)
 router.route('/').get(auth, getallImages)
 router.route('/:id').delete(auth, deleteImage)
 export default router
