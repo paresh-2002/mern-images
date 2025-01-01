@@ -2,10 +2,10 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import connectDB from "./db/index.js";
-import userRouter from './routes/user.routes.js';
-import customerRouter from './routes/customer.routes.js';
-import imageRouter from './routes/image.routes.js';
+import userRouter from './src/routes/user.routes.js';
+import customerRouter from './src/routes/customer.routes.js';
+import imageRouter from './src/routes/image.routes.js';
+import connectDB from "./src/db/index.js";
 
 dotenv.config();
 
