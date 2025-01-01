@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL || "https://mern-images-app.vercel.app"]
+    origin: process.env.FRONTEND_URL
     credentials: true,
   })
 );
